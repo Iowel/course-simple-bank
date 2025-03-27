@@ -17,4 +17,13 @@ migratedown:
 sqlc:
 	sqlc generate
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc
+pqInstall:
+	go get github.com/lib/pq
+
+testifyInstall:
+	go get github.com/stretchr/testify
+
+test:
+	go test -v -cover ./...
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc pqinstall testifyInstall test
