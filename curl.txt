@@ -23,3 +23,9 @@ curl -X POST http://localhost:8080/transfers \
      -H "Content-Type: application/json" \
      -d '{"from_account_id": 216, "to_account_id": 217, "amount": 100, "currency": "USD"}'
 
+
+
+### POST CREATE USER
+curl -X POST http://localhost:8080/accounts \
+     -H "Content-Type: application/json" \
+     -d '{"owner": "agqskw", "currency": "EUR"}'
