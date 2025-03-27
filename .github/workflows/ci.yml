@@ -14,8 +14,26 @@ jobs:
   test:
     name: test
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        # Docker Hub image
+        image: postgres:16.3
+        # Provide the password for postgres
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: 1234
+          POSTGRES_DB: simple_bank
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
     - uses: actions/checkout@v4
+
+
 
     - name: Set up Go
       uses: actions/setup-go@v4
@@ -24,6 +42,9 @@ jobs:
 
     - name: Build
       run: go build -v ./...
+    
+    - name: Run migrations
+      run: make migrateup
 
     - name: Test
       run: make test
