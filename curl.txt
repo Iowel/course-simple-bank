@@ -28,4 +28,11 @@ curl -X POST http://localhost:8080/transfers \
 ### POST CREATE USER
 curl -X POST http://localhost:8080/accounts \
      -H "Content-Type: application/json" \
-     -d '{"owner": "agqskw", "currency": "EUR"}'
+     -d '{"owner": "agqsskw", "currency": "EUR"}'
+
+
+
+### POST CREATE USER
+curl -X POST http://localhost:8080/users \
+     -H "Content-Type: application/json" \
+     -d '{"username": "johnssss", "full_name": "doe", "email": "johnsssss@email.com", "password": "123awwdawdwd"}'
