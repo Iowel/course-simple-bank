@@ -1,17 +1,20 @@
 services:
-  db:
+  postgres:
     image: postgres:16.3
-    container_name: postgres_container
-    restart: always
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: 1234
-      POSTGRES_DB: test_db
+      - POSTGRES_USER=root 
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=simple_bank
+    
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "5434:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  postgres_data:
-    driver: local
+      - "8080:8080"
+    environment:
+      - DB_SOURCE=postgresql://root:1234@postgres:5432/simple_bank?sslmode=disable
+    depends_on:
+      - postgres
+    entrypoint: [ "/app/wait-for.sh", "postgres:5432", "--", "/app/start.sh" ]
+    command: [ "/app/main" ]

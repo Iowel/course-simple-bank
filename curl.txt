@@ -1,21 +1,23 @@
 ### POST
 curl -X POST http://localhost:8080/accounts \
-     -H "Content-Type: application/json" \
+ -H "Authorization: Bearer v2.local.cSJE9-KmbWCFRh1LwLTO5uV1xdIDAYX1BXHExN2MIQKPyNLHZzFqgmo5TtsrEVnBi9-lKMS9uqMASsyqC-t8Ohhpa-2oD1DVd5MGzHeyA-TzUzl4SblH-DrtGghW28uzA-P3LifExV10qJkWvOpj8nKvvqzvcWVAFNAdvY2HWYurspBZg9dQ65fHGnAlKzstipStD89LPQtaGAunYDbTkyN3ztnoRHD_-M0Dxr_Sfny0fNf0paiMpsDqhSFc0RTJjH0.bnVsbA"
      -d '{"owner": "Sasha", "currency": "RUB"}'
 
 
 
 
 ### GET
-curl -X GET http://localhost:8080/accounts/165
- -H "Authorization: Bearer v2.local.76QPQsKhu4MBf4Gn3CUpn30tY7JTidSH07kU4WugGsVQTy87sBVol7Faw_oW7s9Yh5hPNRc9ow_gNEGML47kPPC4HgdnR2TmzkUeFsiszh229ziHLX89Gb_dJtxKuboE92hrbAOcGtwoUG4f4XY-XTW9bKJZx2ljoyHOnTk97H4RgSgPbVAjNRD48j08Q8U5Gg63_WIET-f3MtETtlwqSrPzhPGAbNmsY-OsV4O9OlXSvLsrUpBgYq4biWDqOA7kRribeYK7WU5ImRTL.bnVsbA"
+curl -X GET http://localhost:8080/accounts/1
+ -H "Authorization: Bearer v2.local.cSJE9-KmbWCFRh1LwLTO5uV1xdIDAYX1BXHExN2MIQKPyNLHZzFqgmo5TtsrEVnBi9-lKMS9uqMASsyqC-t8Ohhpa-2oD1DVd5MGzHeyA-TzUzl4SblH-DrtGghW28uzA-P3LifExV10qJkWvOpj8nKvvqzvcWVAFNAdvY2HWYurspBZg9dQ65fHGnAlKzstipStD89LPQtaGAunYDbTkyN3ztnoRHD_-M0Dxr_Sfny0fNf0paiMpsDqhSFc0RTJjH0.bnVsbA"
+
 
 
 
 
 ### GET QUERY
 curl -X GET http://localhost:8080/accounts?page_id=1&page_size=10
- -H "Authorization: Bearer v2.local.76QPQsKhu4MBf4Gn3CUpn30tY7JTidSH07kU4WugGsVQTy87sBVol7Faw_oW7s9Yh5hPNRc9ow_gNEGML47kPPC4HgdnR2TmzkUeFsiszh229ziHLX89Gb_dJtxKuboE92hrbAOcGtwoUG4f4XY-XTW9bKJZx2ljoyHOnTk97H4RgSgPbVAjNRD48j08Q8U5Gg63_WIET-f3MtETtlwqSrPzhPGAbNmsY-OsV4O9OlXSvLsrUpBgYq4biWDqOA7kRribeYK7WU5ImRTL.bnVsbA"
+ -H "Authorization: Bearer v2.local.cSJE9-KmbWCFRh1LwLTO5uV1xdIDAYX1BXHExN2MIQKPyNLHZzFqgmo5TtsrEVnBi9-lKMS9uqMASsyqC-t8Ohhpa-2oD1DVd5MGzHeyA-TzUzl4SblH-DrtGghW28uzA-P3LifExV10qJkWvOpj8nKvvqzvcWVAFNAdvY2HWYurspBZg9dQ65fHGnAlKzstipStD89LPQtaGAunYDbTkyN3ztnoRHD_-M0Dxr_Sfny0fNf0paiMpsDqhSFc0RTJjH0.bnVsbA"
+
 
 
 
@@ -28,16 +30,15 @@ curl -X POST http://localhost:8080/transfers \
 
 ### POST CREATE USER
 curl -X POST http://localhost:8080/accounts \
- -H "Authorization: Bearer v2.local.NHAu9C7We-Dz75xicMw8_O0lkPh7Gx1tUls0x0bmm5RfYFoUTlkUgVnxDV8ZlRifI4Hh5Vr6ck7C4CroGe6HYd0ybu4Vv2vTGrIDimLlnFQ0xafqIJHCrjIwajwx1SNcztV-m9Vuq9Xsy94-PO5fx_R6h5wqw16CHn1SIQWLHz375PwMJTdlzfQU0favSajJ8FXFjx-JWgYQ_dEzfBbyv5Q8R0UPe5EztxfOOfx2c48XIMvYHrYpFscEgweNej_VAM5qGBbAEhJALO69.bnVsbA" \
-     -H "Content-Type: application/json" \
-     -d '{"owner": "alex2", "currency": "EUR"}'
+ -H "Authorization: Bearer v2.local.cSJE9-KmbWCFRh1LwLTO5uV1xdIDAYX1BXHExN2MIQKPyNLHZzFqgmo5TtsrEVnBi9-lKMS9uqMASsyqC-t8Ohhpa-2oD1DVd5MGzHeyA-TzUzl4SblH-DrtGghW28uzA-P3LifExV10qJkWvOpj8nKvvqzvcWVAFNAdvY2HWYurspBZg9dQ65fHGnAlKzstipStD89LPQtaGAunYDbTkyN3ztnoRHD_-M0Dxr_Sfny0fNf0paiMpsDqhSFc0RTJjH0.bnVsbA" \
+     -d '{"owner": "alex", "currency": "EUR"}'
 
 
 
 ### POST CREATE USER
 curl -X POST http://localhost:8080/users \
      -H "Content-Type: application/json" \
-     -d '{"username": "alex", "full_name": "doe", "email": "alex@email.com", "password": "123awwdawdwd"}'
+     -d '{"username": "john", "full_name": "doe", "email": "john@email.com", "password": "12345678"}'
 
 
 ### POST LOGIN USER
