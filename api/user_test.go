@@ -182,7 +182,7 @@ func TestCreateUserAPI(t *testing.T) {
 			tc.buildStubs(store) // Настройка его поведения (например, какие данные он должен вернуть)
 
 			// Запуск HTTP-сервер с этим моковым хранилищем
-			server := NewServer(store)
+			server := newTestServer(t, store)
 			recorder := httptest.NewRecorder()
 
 			// Преобразуем тело запроса в JSON

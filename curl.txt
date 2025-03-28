@@ -7,7 +7,7 @@ curl -X POST http://localhost:8080/accounts \
 
 
 ### GET
-curl -X GET http://localhost:8080/accounts/5
+curl -X GET http://localhost:8080/accounts/15
 
 
 
@@ -35,4 +35,10 @@ curl -X POST http://localhost:8080/accounts \
 ### POST CREATE USER
 curl -X POST http://localhost:8080/users \
      -H "Content-Type: application/json" \
-     -d '{"username": "johnssss", "full_name": "doe", "email": "johnsssss@email.com", "password": "123awwdawdwd"}'
+     -d '{"username": "john2", "full_name": "doe", "email": "john3@email.com", "password": "123awwdawdwd"}'
+
+
+### POST LOGIN USER
+curl -X POST http://localhost:8080/users/login \
+     -H "Content-Type: application/json" \
+     -d '{"username": "johnssssy", "password": "123awwdawdwd"}'
