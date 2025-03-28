@@ -7,38 +7,40 @@ curl -X POST http://localhost:8080/accounts \
 
 
 ### GET
-curl -X GET http://localhost:8080/accounts/15
+curl -X GET http://localhost:8080/accounts/165
+ -H "Authorization: Bearer v2.local.76QPQsKhu4MBf4Gn3CUpn30tY7JTidSH07kU4WugGsVQTy87sBVol7Faw_oW7s9Yh5hPNRc9ow_gNEGML47kPPC4HgdnR2TmzkUeFsiszh229ziHLX89Gb_dJtxKuboE92hrbAOcGtwoUG4f4XY-XTW9bKJZx2ljoyHOnTk97H4RgSgPbVAjNRD48j08Q8U5Gg63_WIET-f3MtETtlwqSrPzhPGAbNmsY-OsV4O9OlXSvLsrUpBgYq4biWDqOA7kRribeYK7WU5ImRTL.bnVsbA"
 
 
 
 
 ### GET QUERY
-curl -X GET http://localhost:8080/accounts?page_id=1&page_size=6
-
+curl -X GET http://localhost:8080/accounts?page_id=1&page_size=10
+ -H "Authorization: Bearer v2.local.76QPQsKhu4MBf4Gn3CUpn30tY7JTidSH07kU4WugGsVQTy87sBVol7Faw_oW7s9Yh5hPNRc9ow_gNEGML47kPPC4HgdnR2TmzkUeFsiszh229ziHLX89Gb_dJtxKuboE92hrbAOcGtwoUG4f4XY-XTW9bKJZx2ljoyHOnTk97H4RgSgPbVAjNRD48j08Q8U5Gg63_WIET-f3MtETtlwqSrPzhPGAbNmsY-OsV4O9OlXSvLsrUpBgYq4biWDqOA7kRribeYK7WU5ImRTL.bnVsbA"
 
 
 
 ### POST TRANSFERS
 curl -X POST http://localhost:8080/transfers \
-     -H "Content-Type: application/json" \
-     -d '{"from_account_id": 216, "to_account_id": 217, "amount": 100, "currency": "USD"}'
+     -H "Authorization: Bearer v2.local.NHAu9C7We-Dz75xicMw8_O0lkPh7Gx1tUls0x0bmm5RfYFoUTlkUgVnxDV8ZlRifI4Hh5Vr6ck7C4CroGe6HYd0ybu4Vv2vTGrIDimLlnFQ0xafqIJHCrjIwajwx1SNcztV-m9Vuq9Xsy94-PO5fx_R6h5wqw16CHn1SIQWLHz375PwMJTdlzfQU0favSajJ8FXFjx-JWgYQ_dEzfBbyv5Q8R0UPe5EztxfOOfx2c48XIMvYHrYpFscEgweNej_VAM5qGBbAEhJALO69.bnVsbA"
+     -d '{"from_account_id": 170, "to_account_id": 167, "amount": 100, "currency": "EUR"}'
 
 
 
 ### POST CREATE USER
 curl -X POST http://localhost:8080/accounts \
+ -H "Authorization: Bearer v2.local.NHAu9C7We-Dz75xicMw8_O0lkPh7Gx1tUls0x0bmm5RfYFoUTlkUgVnxDV8ZlRifI4Hh5Vr6ck7C4CroGe6HYd0ybu4Vv2vTGrIDimLlnFQ0xafqIJHCrjIwajwx1SNcztV-m9Vuq9Xsy94-PO5fx_R6h5wqw16CHn1SIQWLHz375PwMJTdlzfQU0favSajJ8FXFjx-JWgYQ_dEzfBbyv5Q8R0UPe5EztxfOOfx2c48XIMvYHrYpFscEgweNej_VAM5qGBbAEhJALO69.bnVsbA" \
      -H "Content-Type: application/json" \
-     -d '{"owner": "agqsskw", "currency": "EUR"}'
+     -d '{"owner": "alex2", "currency": "EUR"}'
 
 
 
 ### POST CREATE USER
 curl -X POST http://localhost:8080/users \
      -H "Content-Type: application/json" \
-     -d '{"username": "john2", "full_name": "doe", "email": "john3@email.com", "password": "123awwdawdwd"}'
+     -d '{"username": "alex", "full_name": "doe", "email": "alex@email.com", "password": "123awwdawdwd"}'
 
 
 ### POST LOGIN USER
 curl -X POST http://localhost:8080/users/login \
      -H "Content-Type: application/json" \
-     -d '{"username": "johnssssy", "password": "123awwdawdwd"}'
+     -d '{"username": "alex", "password": "123awwdawdwd"}'
