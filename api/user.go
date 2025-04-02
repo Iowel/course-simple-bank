@@ -143,6 +143,7 @@ func (server *Server) loginUser(ctx *gin.Context) {
 		return
 	}
 
+	// Создание новой записи сессии в БД
 	session, err := server.store.CreateSession(ctx, db.CreateSessionParams{
 		ID:           refreshPayload.ID,
 		Username:     user.Username,
