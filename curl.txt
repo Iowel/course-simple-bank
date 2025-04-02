@@ -1,6 +1,6 @@
 ### POST
 curl -X POST http://localhost:8080/accounts \
- -H "Authorization: Bearer v2.local.cSJE9-KmbWCFRh1LwLTO5uV1xdIDAYX1BXHExN2MIQKPyNLHZzFqgmo5TtsrEVnBi9-lKMS9uqMASsyqC-t8Ohhpa-2oD1DVd5MGzHeyA-TzUzl4SblH-DrtGghW28uzA-P3LifExV10qJkWvOpj8nKvvqzvcWVAFNAdvY2HWYurspBZg9dQ65fHGnAlKzstipStD89LPQtaGAunYDbTkyN3ztnoRHD_-M0Dxr_Sfny0fNf0paiMpsDqhSFc0RTJjH0.bnVsbA"
+ -H "Authorization: Bearer v2.local.MEsU5mVkkWymOpYoMkeDMKnFAptJxY8rBH8Xug2u1-4-QekTRxXy6vCnbFTcq-31rR2KmcPAKegvMAHtIjpHBw9WxU-ctbG_5O1nKGzBLXp-Cgd5WkCi49UeZOxoHTnIvyZc14AKAV1Gu5zXLcD1xZQ4Ta9S_LHlEb8SGmCo_RI1MWzQpuCh8CJKVa1z6Ng7GJGDgObBv5Ax8rjesylmeFSMmC-l-pvW6fiE2qkM92V_E6XycKSn6siZEa3WZA9pBLw.bnVsbA"
      -d '{"owner": "Sasha", "currency": "RUB"}'
 
 
@@ -44,4 +44,4 @@ curl -X POST http://localhost:8080/users \
 ### POST LOGIN USER
 curl -X POST http://localhost:8080/users/login \
      -H "Content-Type: application/json" \
-     -d '{"username": "alex", "password": "123awwdawdwd"}'
+     -d '{"username": "john", "password": "12345678"}'
