@@ -16,7 +16,7 @@ curl -X GET http://localhost:8080/accounts/1
 
 ### GET QUERY
 curl -X GET http://localhost:8080/accounts?page_id=1&page_size=10
- -H "Authorization: Bearer v2.local.cSJE9-KmbWCFRh1LwLTO5uV1xdIDAYX1BXHExN2MIQKPyNLHZzFqgmo5TtsrEVnBi9-lKMS9uqMASsyqC-t8Ohhpa-2oD1DVd5MGzHeyA-TzUzl4SblH-DrtGghW28uzA-P3LifExV10qJkWvOpj8nKvvqzvcWVAFNAdvY2HWYurspBZg9dQ65fHGnAlKzstipStD89LPQtaGAunYDbTkyN3ztnoRHD_-M0Dxr_Sfny0fNf0paiMpsDqhSFc0RTJjH0.bnVsbA"
+ -H "Authorization: Bearer v2.local.oZjnxHlKCYZJ0kmE0lgX0roohc_0bolybR3fJaDEhKyXx_u0X0YotOHc7lQ9mc2Jl5VWxht4jP2X2-9f_vv0rDWSLsMNDICI6wZyYHq7rbNrjvKw-_0fj4Dvc7vMYqvlfT0ll_P1bNZpQIoVIWG1t_v9IIMxC7pJ-1B1_FlhNy0Jw9jAjmwHF0IWiPp6aVj0KEk-MfHmgfRFS2Y96kGelbkX5iQ2qV8zJCuvH6eDg1A8SufYEX648jdHCSPzAi5Qz-w.bnVsbA"
 
 
 
