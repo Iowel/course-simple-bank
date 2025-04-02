@@ -36,6 +36,7 @@ func main() {
 	store := db.NewStore(conn)
 	go runGatewayServer(config, store)
 	runGrpcServer(config, store)
+
 }
 
 func runGrpcServer(config util.Config, store db.Store) {
