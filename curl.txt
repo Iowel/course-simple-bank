@@ -45,3 +45,9 @@ curl -X POST http://localhost:8080/users \
 curl -X POST http://localhost:8080/users/login \
      -H "Content-Type: application/json" \
      -d '{"username": "john", "password": "12345678"}'
+
+
+### POST REFRESH TOKEN
+curl -X POST http://localhost:8080/tokens/renew_access \
+     -H "Content-Type: application/json" \
+     -d '{"refresh_token": "v2.local.ljlHysaFC4OoMh-9n9BBNxRzgkhdPErWlupUiJiyJQmHeWZoypvfZeYC5OvI38zi_EDrZnlV8fY_X6RmlqRlTIF2VV6ASM-7C0QBNVq4MPXq4-6V0olFVw30MeeQ732lROzWRroZ2lgsL8rheVkormyuUQAytee0GF4NRlRw5gbNLnIVN2RAFQQvtjcirV91UPCKCXS5GJbi0M2rM6Y0V7t1W_5Un1Dn9uQiBDtdNg3td4Rgpw4yZvxuEb5BlXQJLHlpXDv0hapgiWHaX.bnVsb"}'
