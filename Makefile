@@ -1,3 +1,5 @@
+DB_URL=postgresql://root:1234@localhost:5434/simple_bank?sslmode=disable
+
 postgres:
 	sudo docker run --name postgres_container --network bank-network -p 5434:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=1234 -d postgres:16.3
 
@@ -8,16 +10,16 @@ dropdb:
 	sudo docker exec -it postgres_container dropdb simple_bank
 
 migrateup:
-	migrate -path db/migration -database "postgresql://root:1234@localhost:5434/simple_bank?sslmode=disable" -verbose up
+	migrate -path db/migration -database "$(DB_URL)" -verbose up
 
 migratedown:
-	migrate -path db/migration -database "postgresql://root:1234@localhost:5434/simple_bank?sslmode=disable" -verbose down
+	migrate -path db/migration -database "$(DB_URL)" -verbose down
 
 migratedown1:
-	migrate -path db/migration -database "postgresql://root:1234@localhost:5434/simple_bank?sslmode=disable" -verbose down 1
+	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
 migrateup1:
-	migrate -path db/migration -database "postgresql://root:1234@localhost:5434/simple_bank?sslmode=disable" -verbose up 1
+	migrate -path db/migration -database "$(DB_URL)" -verbose up 1
 
 
 sqlc:
@@ -38,4 +40,11 @@ server:
 mock:
 	mockgen -package mockdb -destination db/mock/store.go github.com/Iowel/course-simple-bank/db/sqlc Store
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc pqinstall testifyInstall test server mock migratedown1 migrateup1
+db_docs:
+	dbdocs build doc/db.dbml
+
+db_schema:
+	dbml2sql --postgres -o doc/schema.sql doc/db.dbml
+
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc pqinstall testifyInstall test server mock migratedown1 migrateup1 db_docs db_schema
