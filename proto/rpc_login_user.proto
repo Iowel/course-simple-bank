@@ -7,11 +7,13 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/Iowel/course-simple-bank/pb";
 
+// Запрос для логина пользователя
 message LoginUserRequest {
     string username = 1;
     string password = 2;
 }
 
+// Ответ на запрос логина
 message LoginUserResponse {
     User user = 1;
     string session_id = 2;
@@ -20,4 +22,3 @@ message LoginUserResponse {
     google.protobuf.Timestamp access_token_expires_at = 5;
     google.protobuf.Timestamp refresh_token_expires_at = 6;
 }
-

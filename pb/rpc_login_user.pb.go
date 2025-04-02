@@ -22,6 +22,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+// Запрос для логина пользователя
 type LoginUserRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Username      string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
@@ -74,6 +75,7 @@ func (x *LoginUserRequest) GetPassword() string {
 	return ""
 }
 
+// Ответ на запрос логина
 type LoginUserResponse struct {
 	state                 protoimpl.MessageState `protogen:"open.v1"`
 	User                  *User                  `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`

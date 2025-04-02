@@ -6,6 +6,7 @@ import "user.proto";
 
 option go_package = "github.com/Iowel/course-simple-bank/pb";
 
+// Запрос для создания пользователя
 message CreateUserRequest {
     string username = 1;
     string full_name = 2;
@@ -13,7 +14,7 @@ message CreateUserRequest {
     string password = 4;
 }
 
+// Ответ на запрос создания пользователя
 message CreateUserResponse {
     User user = 1;
 }
-
