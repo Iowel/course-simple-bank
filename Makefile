@@ -32,7 +32,7 @@ testifyInstall:
 	go get github.com/stretchr/testify
 
 test:
-	go test -v -cover ./...
+	go test -v -cover -short ./...
 
 server:
 	go run main.go
