@@ -57,17 +57,19 @@ curl -X POST http://localhost:8080/tokens/renew_access \
 ### POST CREATE USER gRPC
 curl -X POST http://localhost:8080/v1/create_user \
      -H "Content-Type: application/json" \
-     -d '{"username": "ssawosla", "full_name": "olsssa", "email": "oalwsssae@mail.com", "password": "12345678"}'
+     -d '{"username": "olegus", "full_name": "oleg", "email": "olegsssae@mail.com", "password": "12345678"}'
 
 
 ### POST LOGIN USER gRPC
 curl -X POST http://localhost:8080/v1/login_user \
      -H "Content-Type: application/json" \
-     -d '{"username": "ssawosla", "password": "12345678"}'
+     -d '{"username": "olegus", "password": "12345678"}'
 
 
 ### POST LOGIN USER gRPC
 curl -X PATCH http://localhost:8080/v1/update_user \
+     -H "Authorization: Bearer v2.local.LdwfaqZiZlRfg0jDSPOUuQcM5N8kEah-cuNuCIkEes-buhedOli8v0zYLfqfx6NWKLRtpTM6EvjEnb3Cr9wAmJMNd2m83LuU4qZjgYwDZNnktQGz7GSDX4LGTNdceSpyUpinRweH6Xg1r1RwvgkysoWhykjmOQgmDZDRrunfU-V5lfC1kh9wwCMahW0_8wn-MabszTxxcBQ3MN5oOmeBbzsN_8Ccj3o6SVzXz3GdUHPKbwXCrfMI5mRvLlHoMHqADZlsJburNDGgUF4qlgI.bnVsbA" \
      -H "Content-Type: application/json" \
-     -d '{"username": "alex", "full_name": "New Alex", "email": "newalex2@mail.com", "password": "12345678"}'
+     --data-raw '{"username": "olegus", "full_name": "wdawd", "email": "newawdefwadawd@mail.com"}'
+
 
