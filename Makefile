@@ -42,6 +42,7 @@ server:
 
 mock:
 	mockgen -package mockdb -destination db/mock/store.go github.com/Iowel/course-simple-bank/db/sqlc Store
+	mockgen -package mockwk -destination worker/mock/distributor.go github.com/Iowel/course-simple-bank/worker TaskDistributor
 
 db_docs:
 	dbdocs build doc/db.dbml
