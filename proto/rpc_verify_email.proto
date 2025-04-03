@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/Iowel/course-simple-bank/pb";
+
+// Запрос для создания пользователя
+message VerifyEmailRequest {
+    int64 email_id = 1;
+    string secret_code = 2;
+}
+
+// Ответ на запрос создания пользователя
+message VerifyEmailResponse {
+    bool is_verified = 1;
+}

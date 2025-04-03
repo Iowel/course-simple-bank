@@ -57,7 +57,7 @@ curl -X POST http://localhost:8080/tokens/renew_access \
 ### POST CREATE USER gRPC
 curl -X POST http://localhost:8080/v1/create_user \
      -H "Content-Type: application/json" \
-     -d '{"username": "danya", "full_name": "danya", "email": "akiko4000akiko@gmail.com", "password": "12345678"}'
+     -d '{"username": "john", "full_name": "john", "email": "akiko4000akiko@gmail.com", "password": "12345678"}'
 
 
 
