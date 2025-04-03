@@ -38,7 +38,7 @@ curl -X POST http://localhost:8080/accounts \
 ### POST CREATE USER
 curl -X POST http://localhost:8080/users \
      -H "Content-Type: application/json" \
-     -d '{"username": "?johns", "full_name": "johnsy", "email": "johns@email.com", "password": "12345678"}'
+     -d '{"username": "aasaasa", "full_name": "aaasaa", "email": "aaaassa@email.com", "password": "12345678"}'
 
 
 ### POST LOGIN USER
@@ -57,11 +57,11 @@ curl -X POST http://localhost:8080/tokens/renew_access \
 ### POST CREATE USER gRPC
 curl -X POST http://localhost:8080/v1/create_user \
      -H "Content-Type: application/json" \
-     -d '{"username": "ola", "full_name": "ola", "email": "olae@mail.com", "password": "12345678"}'
+     -d '{"username": "ssawosla", "full_name": "olsssa", "email": "oalwsssae@mail.com", "password": "12345678"}'
 
 
 ### POST LOGIN USER gRPC
 curl -X POST http://localhost:8080/v1/login_user \
      -H "Content-Type: application/json" \
-     -d '{"username": "johnsyyyy", "password": "12345678"}'
+     -d '{"username": "ssawosla", "password": "12345678"}'
 
