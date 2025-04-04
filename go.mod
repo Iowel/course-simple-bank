@@ -25,7 +25,9 @@ require (
 	github.com/jackc/pgx/v5 v5.5.4
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
 	github.com/rakyll/statik v0.1.7
+	github.com/rs/cors v1.11.1
 	github.com/rs/zerolog v1.34.0
+	golang.org/x/sync v0.12.0
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250324211829-b45e905df463
 )
 
@@ -72,7 +74,6 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/arch v0.15.0 // indirect
 	golang.org/x/net v0.38.0 // indirect
-	golang.org/x/sync v0.12.0 // indirect
 	golang.org/x/sys v0.31.0 // indirect
 	golang.org/x/text v0.23.0 // indirect
 	golang.org/x/time v0.11.0 // indirect
