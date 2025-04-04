@@ -122,6 +122,7 @@ func (server *Server) loginUser(ctx *gin.Context) {
 	// Создание нового токена доступа для этого пользователя
 	accessToken, accessPayload, err := server.tokenMaker.CreateToken(
 		user.Username,
+		user.Role,
 		server.config.AccessTokenDuration,
 	)
 	if err != nil {
@@ -132,6 +133,7 @@ func (server *Server) loginUser(ctx *gin.Context) {
 	// Создаем токен обновления
 	refreshToken, refreshPayload, err := server.tokenMaker.CreateToken(
 		user.Username,
+		user.Role,
 		server.config.RefreshTokenDuration,
 	)
 	if err != nil {

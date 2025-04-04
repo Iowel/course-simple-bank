@@ -57,20 +57,20 @@ curl -X POST http://localhost:8080/tokens/renew_access \
 ### POST CREATE USER gRPC
 curl -X POST http://localhost:8080/v1/create_user \
      -H "Content-Type: application/json" \
-     -d '{"username": "johnaa", "full_name": "johnaa", "email": "akiko6000akiko@gmail.com", "password": "12345678"}'
+     -d '{"username": "bob", "full_name": "Bob", "email": "bob@m.com", "password": "secret"}'
 
 
 
 ### POST LOGIN USER gRPC
 curl -X POST http://localhost:8080/v1/login_user \
      -H "Content-Type: application/json" \
-     -d '{"username": "olegus", "password": "12345678"}'
+     -d '{"username": "alice", "password": "secret"}'
 
 
 ### PATCH UPDATE USER gRPC
 curl -X PATCH http://localhost:8080/v1/update_user \
-     -H "Authorization: Bearer v2.local.LdwfaqZiZlRfg0jDSPOUuQcM5N8kEah-cuNuCIkEes-buhedOli8v0zYLfqfx6NWKLRtpTM6EvjEnb3Cr9wAmJMNd2m83LuU4qZjgYwDZNnktQGz7GSDX4LGTNdceSpyUpinRweH6Xg1r1RwvgkysoWhykjmOQgmDZDRrunfU-V5lfC1kh9wwCMahW0_8wn-MabszTxxcBQ3MN5oOmeBbzsN_8Ccj3o6SVzXz3GdUHPKbwXCrfMI5mRvLlHoMHqADZlsJburNDGgUF4qlgI.bnVsbA" \
+     -H "Authorization: Bearer v2.local.6iR1JMHOwIQjRbI3Yx-0MJqX3Nj5EySsZZKzG4BI80jW_t3DAkRgoF0oWxk0qV0_wiezpqSL8eTu0vvRSBUsQRLmrsePDl1QOibR_bkgLdqE3tc4i7rqQjcUwXuLahWykRMy4oIA0Ekk1fj8e95BS7CrPsaskh7Eh1I9mi5Dyt4FkV_iIITaopV_OyXN5WmwEP442tZ2bFmtUAeaNAemD3LRdmh-GEbfo4kKrNYWeE932n0OCzcDeXvGldUEMpL5h40QE4N-AyfCRz8UdMgE90gwtJSEL7tow3ZMI44P1Oo.bnVsbA" \
      -H "Content-Type: application/json" \
-     --data-raw '{"username": "olegus", "full_name": "wdawd", "email": "newawdefwadawd@mail.com"}'
+     --data-raw '{"username": "alice", "full_name": "alice Two"}'
 
 
